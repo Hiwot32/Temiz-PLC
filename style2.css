@@ -1,0 +1,313 @@
+/* =======================================
+   RESET & GENERAL STYLES
+======================================= */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+}
+
+/* h1,h3,h4,h5,p{
+  margin: 0;
+} */
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.outerSection{
+  height:650px;
+  background:url('./images/hero.webp') center/cover no-repeat;
+  color:white;
+}
+
+.header{
+  display:flex;
+  gap:450px;
+  align-items:center;
+  padding:20px 60px;
+  width: 100%;
+}
+
+.header .left h2{
+  font-size:28px;
+  font-weight:700;
+  color:#e67e22;
+}
+
+.header .right ul{
+  display:flex;
+  gap:35px;
+}
+
+.header .right a{
+  font-weight:500;
+  transition:0.3s;
+  color:white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header .right a:hover{
+  color:#e67e22;
+}
+
+
+.homeSection{
+  position:relative;
+  width:50%;
+  padding:0 60px;
+  margin-top:50px; 
+}
+
+.homeSection h1{
+  font-size:50px;
+  margin-bottom:20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.homeSection p{
+  font-size:18px;
+  margin-bottom:30px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.btns button{
+  padding:12px 30px;
+  border-radius:30px;
+  margin-right:15px;
+  cursor:pointer;
+  font-weight:500;
+}
+
+.btns button:first-child{
+  background:#e67e22;
+  color:white;
+  border:none;
+}
+.btns button:first-child:hover{
+  background:#d35400;
+}
+
+.btns button:last-child{
+  background:transparent;
+  border:2px solid #e67e22;
+  color:#e67e22;
+}
+.btns button:last-child:hover{
+  background:#e67e22;
+  color:white;
+}
+
+
+.about{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  padding:80px 60px;
+}
+.inner{
+    display:flex;
+}
+
+.about .left{
+  flex:1;
+}
+
+.about .left h1{
+  font-size:36px;
+  margin-bottom:20px;
+  color:#2c3e50;
+}
+
+.about .left p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.about .right{
+  flex:1;
+}
+
+.about .right img{
+  width:100%;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+.shops{
+  padding:80px 60px;
+  background-color:#fefefe;
+}
+
+.shops h3{
+  font-size:36px;
+  margin-bottom:50px;
+  text-align:center;
+  color:#2c3e50;
+}
+
+.items{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr); 
+  gap:40px;
+}
+
+.items div{
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+  cursor:pointer;
+  background:white;
+  text-align:center;
+}
+
+.items div:hover{
+  transform:translateY(-10px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+.items img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.items h5{
+  margin:15px 0;
+  font-size:18px;
+  font-weight:600;
+}
+
+
+.services{
+  padding:80px 60px;
+  background-color: #f9f9f9;
+}
+
+.services h4{
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.grids{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.grids div{
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+}
+
+.grids div:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.grids img{
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+
+.contact{
+  padding:80px 60px;
+}
+
+.contact .form-control{
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid #ccc;
+}
+
+.contact .btn-primary{
+  background-color: #e67e22;
+  border: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.contact .btn-primary:hover{
+  background-color: #d35400;
+}
+
+
+@media (max-width: 991px){
+  .about{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+  .inner{
+    flex-direction: column;
+  }
+  .about .right img{
+    margin-bottom:30px;
+  }
+  
+  .homeSection{
+    width: 80%;
+    padding-left: 30px;
+    margin-top:30px;
+  }
+  
+  .header{
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 30px;
+  }
+
+  .header .right ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .items{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 568px) {
+  .homeSection {
+    padding: 40px 15px; /* reduce top/bottom padding */
+  }
+
+  .homeSection h1 {
+    font-size: 22px; /* smaller heading */
+    line-height: 1.3;
+  }
+
+  .homeSection p {
+    font-size: 14px; /* smaller paragraph */
+    line-height: 1.5;
+  }
+
+  .homeSection .btns {
+    flex-direction: column; /* stack buttons vertically */
+    gap: 10px;
+  }
+
+  .homeSection button {
+    width: 100%; /* make buttons full width */
+  }
+}
